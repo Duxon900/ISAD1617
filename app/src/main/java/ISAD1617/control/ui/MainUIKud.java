@@ -42,4 +42,5 @@ public class MainUIKud {
     @FXML
     private TableColumn<?, ?> zut2Argazki;
 
+
 }

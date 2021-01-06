@@ -3,6 +3,33 @@
  */
 package ISAD1617;
 
-public class Main {
+import ISAD1617.control.ui.MainUIKud;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+public class Main extends Application {
+    //Stage
+    private Stage stage;
+
+    private Parent parent;
+
+    private MainUIKud mainUIKud;
+
+    private Scene scene;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        stage=primaryStage;
+        stage.setTitle("ISAD1617");
+
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/main.fxml"));
+        parent=(Parent) loader.load();
+        scene=new Scene(parent);
+
+        stage.setScene(scene);
+        stage.show();
+    }
 }
