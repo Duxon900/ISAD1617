@@ -222,7 +222,17 @@ public class MainUIKud implements Initializable {
 
     @FXML
     void onClickGorde(ActionEvent event) {
+        DBKudeatzaile.getInstantzia().execSQL("delete from datuak");
 
+        emaitza2.forEach(elem->{
+            String query="insert into datuak (firstname,lastname,sport,numyears,vegetarian) values('"+
+                    elem.getFirstname()+"','"+
+                    elem.getLastname()+"','"+
+                    elem.getSport()+"','"+
+                    elem.getNumyears()+"','"+
+                    (elem.isVegetarian()?1:0)+"')";
+            DBKudeatzaile.getInstantzia().execSQL(query);
+        });
     }
 
     @FXML
