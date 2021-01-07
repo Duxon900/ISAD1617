@@ -20,13 +20,13 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="424.0" layoutY="110.0" mnemonicParsing="false" text="Sartu" />
-      <Button layoutX="421.0" layoutY="237.0" mnemonicParsing="false" text="Kendu" />
-      <Button layoutX="421.0" layoutY="170.0" mnemonicParsing="false" text="Gorde" />
+      <Button layoutX="424.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickSartu" text="Sartu" />
+      <Button layoutX="421.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClickKendu" text="Kendu" />
+      <Button layoutX="421.0" layoutY="170.0" mnemonicParsing="false" onAction="#onClickGorde" text="Gorde" />
       <TableView fx:id="taula2" layoutX="494.0" layoutY="14.0" prefHeight="470.0" prefWidth="392.0">
          <columns>
             <TableColumn fx:id="zut2Izena" prefWidth="75.0" text="Izena" />
-            <TableColumn fx:id="zut2Izena" prefWidth="75.0" text="Abizena" />
+            <TableColumn fx:id="zut2Abizena" prefWidth="75.0" text="Abizena" />
             <TableColumn fx:id="zut2Kirola" prefWidth="75.0" text="Sport" />
             <TableColumn fx:id="zut2Urte" prefWidth="75.0" text="Urte" />
             <TableColumn fx:id="zut2Vegetta777" prefWidth="75.0" text="Porrotarianoa" />
