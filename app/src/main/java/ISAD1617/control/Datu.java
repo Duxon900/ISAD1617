@@ -5,9 +5,19 @@ import javafx.scene.image.Image;
 public class Datu {
     private String firstname;
     private String lastname;
+    private String sport;
     private int numyears;
     private boolean vegetarian;
     private Image argazkia;
+
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
 
     public String getFirstname() {
         return firstname;
