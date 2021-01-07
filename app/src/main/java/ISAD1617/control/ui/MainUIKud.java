@@ -227,24 +227,27 @@ public class MainUIKud implements Initializable {
 
     @FXML
     void onClickKendu(ActionEvent event) {
+        datuaLortu(taula2, emaitza1, emaitza2);
+    }
 
+    private void datuaLortu(TableView<Datu> taula, ObservableList<Datu> emaitza1, ObservableList<Datu> emaitza2) {
+        if(!taula.getItems().isEmpty()){
+            Datu datu= taula.getSelectionModel().getSelectedItem();
+
+            if(datu==null) {
+                datu= taula.getItems().get(0);
+                emaitza1.add(datu);
+                emaitza2.remove(0);
+            }
+            else{
+                emaitza1.add(datu);
+                emaitza2.remove(datu);
+            }
+        }
     }
 
     @FXML
     void onClickSartu(ActionEvent event) {
-
-        Datu datu=taula1.getSelectionModel().getSelectedItem();
-
-        if(datu==null) {
-            datu=taula1.getItems().get(0);
-            emaitza2.add(datu);
-            emaitza1.remove(0);
-        }
-        else{
-            emaitza2.add(datu);
-            emaitza1.remove(datu);
-        }
-
-
+        datuaLortu(taula1, emaitza2, emaitza1);
     }
 }
