@@ -240,6 +240,10 @@ public class MainUIKud implements Initializable {
             emaitza2.add(datu);
             emaitza1.remove(0);
         }
+        else{
+            emaitza2.add(datu);
+            emaitza1.remove(datu);
+        }
 
 
     }
